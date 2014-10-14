@@ -1,8 +1,6 @@
-<div>
-
-</div>
+<input type="text" placeholder="Search" ng-model="search"/>
 <ul>
-  <li ng-repeat="element in controller.elements">
+  <li ng-repeat="element in controller.elements | filter: search">
     <h1>{{ element.name }}</h1>
     <h2>{{ element.display }}</h2>
     <p>{{ element.description }}</p>
