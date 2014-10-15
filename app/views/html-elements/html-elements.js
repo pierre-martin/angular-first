@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('myApp.htmlElements', ['ngRoute'])
-  .config(['$routeProvider', function ($routeProvider) {
+angular.module('myApp.htmlElements', ['ngRoute', 'ngResource'])
+  .config(['$routeProvider', function ($routeProvider, $resource) {
     $routeProvider
       .when('/html-elements', {
         templateUrl: 'app/views/html-elements/html-elements.html',

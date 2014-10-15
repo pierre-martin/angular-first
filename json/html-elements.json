@@ -1,0 +1,67 @@
+[
+  {
+    "name": "html",
+    "display": "block",
+    "description": "The base tag of an HTML page."
+  },
+  {
+    "name": "head",
+    "display": "block",
+    "description": "A tag containing information about the page."
+  },
+  {
+    "name": "body",
+    "display": "block",
+    "description": "The tag containing all the page content."
+  },
+  {
+    "name": "div",
+    "display": "block",
+    "description": "A generic block tag."
+  },
+  {
+    "name": "span",
+    "display": "inline",
+    "description": "A generic inline tag."
+  },
+  {
+    "name": "p",
+    "display": "block",
+    "description": "A tag for paragraphs."
+  },
+  {
+    "name": "h1",
+    "display": "block",
+    "description": "A tag for major titles."
+  },
+  {
+    "name": "h2",
+    "display": "block",
+    "description": "A tag for title less important that 'h1' ones."
+  },
+  {
+    "name": "a",
+    "display": "inline",
+    "description": "A tag to link other page."
+  },
+  {
+    "name": "script",
+    "display": "block",
+    "description": "A tag to import and execute Ja&vScript scripts."
+  },
+  {
+    "name": "form",
+    "display": "block",
+    "description": "A tag containing a form to be completed.."
+  },
+  {
+    "name": "input",
+    "display": "inline",
+    "description": "A tag to enter information.."
+  },
+  {
+    "name": "label",
+    "display": "inline",
+    "description": "A tag to specify input."
+  }
+]

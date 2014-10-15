@@ -1,3 +1,10 @@
-/**
- * Created by PMA3259 on 15/10/2014.
- */
+'use strict';
+
+angular.module('myApp.htmlElements')
+  .factory('htmlElementsService', [
+  '$resource',
+  function ($resource) {
+    return $resource('json/html-elements.json', {}, {
+      getElements: { method: 'GET', params: {}, isArray: true }
+    });
+  }]);
