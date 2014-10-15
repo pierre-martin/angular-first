@@ -6,9 +6,12 @@ angular.module('myApp.htmlElements')
     'htmlElementsService',
     function ($scope, htmlElementsService) {
       // Just some funny data...
-      this.elements = getElements();
+      var controller = this;
+      getElements();
 
       function getElements() {
-        return htmlElementsService.getElements();
+        return htmlElementsService.getElements().then(function (promise) {
+          controller.elements = promise.elements;
+        });
       }
   }]);

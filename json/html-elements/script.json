@@ -1,0 +1,5 @@
+{
+  "name": "script",
+  "display": "block",
+  "description": "A tag to import and execute Ja&vScript scripts."
+}

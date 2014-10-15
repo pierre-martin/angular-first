@@ -3,10 +3,20 @@
 angular.module('myApp.htmlElements')
   .controller('htmlElementController', [
     '$scope',
-    function ($scope) {
+    '$routeParams',
+    'htmlElementsService',
+    function ($scope, $routeParams, htmlElementsService) {
       // Just some funny data...
-      this.name = 'the-name';
-      this.display = 'block';
-      this.description = 'I\'m a block element that rocks! And I guess that\'s enough for now.';
-      this.templateExample = '<the-name>Yeah! I\'m the template!</the-name>';
+      var controller = this;
+      var name = $routeParams.name;
+      getElement(name);
+
+      function getElement(name) {
+        htmlElementsService.getElement(name).then(function (element) {
+          controller.name = element.name;
+          controller.display = element.display;
+          controller.description = element.description;
+//          controller.templateExample = element.templateExample;
+        });
+      }
   }]);
