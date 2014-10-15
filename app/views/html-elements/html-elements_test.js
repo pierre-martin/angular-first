@@ -1,14 +1,17 @@
 'use strict';
 
-describe('myApp.view1 module', function() {
+describe('myApp.htmlElements module', function() {
 
-  beforeEach(module('myApp.view1'));
+  beforeEach(module('myApp.htmlElements'));
 
-  describe('view1 controller', function(){
+  describe('htmlElements controller', function(){
+
+    var scope;
 
     it('should ....', inject(function($controller) {
       //spec body
-      var view1Ctrl = $controller('View1Ctrl');
+      scope = {};
+      var view1Ctrl = $controller('htmlElementsController', {$scope:scope});
       expect(view1Ctrl).toBeDefined();
     }));
 
