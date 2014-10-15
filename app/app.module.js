@@ -4,6 +4,5 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.htmlElements',
-  'myApp.htmlElement',
   'myApp.version'
 ]);

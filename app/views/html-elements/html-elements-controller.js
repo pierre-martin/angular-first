@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('myApp.htmlElements')
   .controller('htmlElementsController', [
     '$scope',
