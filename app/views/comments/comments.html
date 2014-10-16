@@ -1,0 +1,34 @@
+<form name="commentForm" ng-submit="controller.submit()">
+  <div class="field">
+    <input name="author" ng-model="controller.author" type="text" placeholder="Name" pattern="\w{2,}" minlength="2" required>
+    <div ng-messages="commentForm.author.$error"
+         ng-if="!commentForm.$pristine && (commentForm.$submitted || commentForm.author.$touched)">
+      <div ng-message="required">A name is required.</div>
+      <div ng-message="minlength">The name should be two characters long at least.</div>
+      <div ng-message="pattern">The name should only contain alphanumerical characters.</div>
+    </div>
+  </div>
+  <div class="field">
+    <input name="email" ng-model="controller.emailAddress" type="email" placeholder="Email address" required>
+    <div ng-messages="commentForm.email.$error"
+         ng-if="!commentForm.$pristine && (commentForm.$submitted || commentForm.email.$touched)">
+      <div ng-message="required">An email address is required.</div>
+      <div ng-message="pattern">The email address is malformed.</div>
+    </div>
+  </div>
+  <div class="field">
+    <textarea name="comment" ng-model="controller.content" placeholder="Comment" required></textarea>
+    <div ng-messages="commentForm.comment.$error"
+         ng-if="!commentForm.$pristine && (commentForm.$submitted || commentForm.comment.$touched)">
+      <div ng-message="required">A comment is required.</div>
+    </div>
+  </div>
+  <input type="submit" id="submit" value="Add comment">
+</form>
+<ul>
+  <li ng-repeat="comment in controller.comments">
+    <div>{{ comment.author }}</div>
+    <div>{{ comment.emailAddress }}</div>
+    <p>{{ comment.content }}</p>
+  </li>
+</ul>

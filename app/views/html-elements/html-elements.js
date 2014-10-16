@@ -1,7 +1,9 @@
-'use strict';
+(function() {
 
-angular.module('myApp.htmlElements', [
-  'ngRoute'
+  'use strict';
+
+  angular.module('myApp.htmlElements', [
+    'ngRoute'
   ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/html-elements', {
@@ -15,3 +17,4 @@ angular.module('myApp.htmlElements', [
         controllerAs: 'controller'
       });
   }]);
+})();
