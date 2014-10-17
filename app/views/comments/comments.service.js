@@ -12,7 +12,7 @@
       return service;
 
       function addComment(comment) {
-        $log.log('Adding comment '+comment);
+        $log.log('Adding comment ' + comment);
         // API call...
         var deferred = $q.defer();
 
