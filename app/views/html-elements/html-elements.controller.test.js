@@ -38,8 +38,8 @@
 
       it('should return all the HTML elements to be displayed.', function () {
         // scope.$digest() will fire watchers on current scope, in short will
-        // run the callback function in the controller that will call
-        // anotherService.doSomething
+        // run the callback function in the controller that will set the
+        // elements to be displayed.
         // see http://nadeemkhedr.wordpress.com/2013/10/18/angularjs-good-unit-test-structure-for-controllers/
         scope.$digest();
         expect(controller.elements).toBeDefined();
