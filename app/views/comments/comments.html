@@ -1,4 +1,4 @@
-<form name="commentForm" ng-submit="controller.submit()">
+<form name="commentForm" ng-submit="controller.submitForm()">
   <div class="field">
     <input name="author" ng-model="controller.comment.author" type="text" placeholder="Name" pattern="\w{2,}" minlength="2" required>
     <div ng-messages="commentForm.author.$error"

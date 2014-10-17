@@ -11,16 +11,11 @@
       };
       this.originalComment = angular.copy(this.comment);
       this.comments = [];
-      this.submit = submit;
+      this.submitForm = submitForm;
 
-      function submit() {
-        var comment = {
-          author: controller.comment.author,
-          emailAddress: controller.comment.emailAddress,
-          content: controller.comment.content
-        };
-        commentsService.addComment(comment).then(function () {
-          controller.comments.push(comment);
+      function submitForm() {
+        commentsService.addComment(controller.comment).then(function () {
+          controller.comments.push(controller.comment);
           resetForm();
         });
       }
